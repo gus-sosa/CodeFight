@@ -10,25 +10,32 @@ namespace firstNonRepeatingCharacter
     {
         char firstNotRepeatingCharacter(string s)
         {
-            int firstIndex = -1;
-            char firstNonRepeatingCharacter = '_';
-            bool[] map = new bool[26];
+            var map = new byte[26];
 
-            for (int i = 0; i < s.Length; i++)
+            foreach (char currentCharacter in s)
             {
-                char currentCharacter = s[i];
                 int indexInMap = currentCharacter - 'a';
-                if (map[indexInMap])
-                {
-                    
-                }
-                else
-                {
-                        
-                }
+                map[indexInMap]++;
             }
 
-            return firstNonRepeatingCharacter;
+            int bestIndex = -1;
+            for (int i = 0; i < map.Length; i++)
+                if (map[i] == 1)
+                {
+                    char mapCharacter = Convert.ToChar('a' + i);
+                    for (int j = 0; j < s.Length; j++)
+                    {
+                        char currentCharacter = s[j];
+                        if (mapCharacter == currentCharacter)
+                        {
+                            if (bestIndex == -1 || j < bestIndex)
+                                bestIndex = j;
+                            break;
+                        }
+                    }
+                }
+
+            return bestIndex == -1 ? '_' : s[bestIndex];
         }
 
 
