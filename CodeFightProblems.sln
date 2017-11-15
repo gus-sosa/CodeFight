@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arrays", "Arrays", "{EB1E80
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "firstNonRepeatingCharacter", "firstNonRepeatingCharacter\firstNonRepeatingCharacter.csproj", "{2E4E7056-E4EF-43CE-B96E-DF26EF1E9730}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotateImage", "RotateImage\RotateImage.csproj", "{CA7F2423-698C-45EB-B844-5748AC8889D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2E4E7056-E4EF-43CE-B96E-DF26EF1E9730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4E7056-E4EF-43CE-B96E-DF26EF1E9730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4E7056-E4EF-43CE-B96E-DF26EF1E9730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7F2423-698C-45EB-B844-5748AC8889D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7F2423-698C-45EB-B844-5748AC8889D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7F2423-698C-45EB-B844-5748AC8889D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7F2423-698C-45EB-B844-5748AC8889D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +39,7 @@ Global
 		{AD0910AC-8278-4B0E-9C5C-513375CCD7C3} = {EB1E805B-2963-4188-ACC5-F908F2A28CAC}
 		{EB1E805B-2963-4188-ACC5-F908F2A28CAC} = {E87B9B83-55CE-451B-B3A4-5D0FDA59FE97}
 		{2E4E7056-E4EF-43CE-B96E-DF26EF1E9730} = {EB1E805B-2963-4188-ACC5-F908F2A28CAC}
+		{CA7F2423-698C-45EB-B844-5748AC8889D4} = {EB1E805B-2963-4188-ACC5-F908F2A28CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
