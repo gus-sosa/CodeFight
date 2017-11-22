@@ -17,8 +17,12 @@ namespace RemoveKFromList
 
         ListNode<int> removeKFromList(ListNode<int> l, int k)
         {
+            while (l != null && l.value == k)
+                l = l.next;
+
             var current = l;
             ListNode<int> previous = null;
+
             while (current != null)
                 if (current.value == k)
                 {
@@ -38,7 +42,7 @@ namespace RemoveKFromList
         static void Main(string[] args)
         {
             var p = new Program();
-            PrintList(p.removeKFromList(CreateList(new int[] { 3, 1, 2, 3, 4, 5 }), 3));
+            PrintList(p.removeKFromList(CreateList(new int[] { 3, 1, 2, 3, 4, 3, 3, 3, 3, 5, 3 }), 3));
         }
 
         private static void PrintList(ListNode<int> listNode)
