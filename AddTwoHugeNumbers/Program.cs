@@ -8,9 +8,6 @@ namespace AddTwoHugeNumbers
 {
     class Program
     {
-        const int MOD = 10000;
-        const int LEN = MOD - 1;
-
         class ListNode<T>
         {
             public T value { get; set; }
@@ -19,33 +16,34 @@ namespace AddTwoHugeNumbers
 
         ListNode<int> addTwoHugeNumbers(ListNode<int> a, ListNode<int> b)
         {
-            return addTwoHugeNumbers(a, b, 0);
+            return reverse(addTwoHugeNumbers1(reverse(a), reverse(b), 0));
         }
 
-        private ListNode<int> addTwoHugeNumbers(ListNode<int> a, ListNode<int> b, int rest)
+        ListNode<int> reverse(ListNode<int> list)
         {
-            if (a == null && b == null)
+            var stack = new Stack<int>();
+            while (list != null)
             {
-                ListNode<int> result = null;
-                ListNode<int> current = null;
-                while (rest > 0)
-                {
-                    var newNode = new ListNode<int>() { value = rest % MOD };
-                    if (result == null)
-                    {
-                        result = current = newNode;
-                    }
-                    else
-                    {
-                        current.next = newNode;
-                        current = current.next;
-                    }
-                    rest = rest / MOD;
-                }
-
-                return result;
+                stack.Push(list.value);
+                list = list.next;
             }
 
+            if (stack.Count == 0)
+                return null;
+            var result = new ListNode<int>() { value = stack.Pop() };
+            var current = result;
+
+            while (stack.Count > 0)
+            {
+                current.next = new ListNode<int>() { value = stack.Pop() };
+                current = current.next;
+            }
+
+            return result;
+        }
+
+        ListNode<int> addTwoHugeNumbers1(ListNode<int> a, ListNode<int> b, int rest)
+        {
             if (a == null || b == null)
             {
                 var noNullFactor = a ?? b;
@@ -53,9 +51,9 @@ namespace AddTwoHugeNumbers
                 ListNode<int> current = null;
                 while (noNullFactor != null || rest > 0)
                 {
-                    int currentSum = (b == null ? 0 : b.value) + rest;
-                    int currentValue = currentSum % MOD;
-                    int nextValue = currentSum / MOD;
+                    int currentSum = (noNullFactor?.value ?? 0) + rest;
+                    int currentValue = currentSum % 10000;
+                    int nextValue = currentSum / 10000;
 
                     var currentNode = new ListNode<int>() { value = currentValue };
                     if (result == null)
@@ -69,23 +67,56 @@ namespace AddTwoHugeNumbers
                     }
 
                     rest = nextValue;
+                    noNullFactor = noNullFactor?.next;
                 }
 
                 return result;
             }
 
             int CurrentSum = a.value + b.value + rest;
-            int CurrentValue = CurrentSum % MOD;
-            int nextRest = CurrentSum / MOD;
+            int CurrentValue = CurrentSum % 10000;
+            int nextRest = CurrentSum / 10000;
             return new ListNode<int>()
             {
                 value = CurrentValue,
-                next = addTwoHugeNumbers(a.next, b.next, nextRest)
+                next = addTwoHugeNumbers1(a.next, b.next, nextRest)
             };
         }
 
         static void Main(string[] args)
         {
+            var p = new Program();
+            var a = new ListNode<int>()
+            {
+                value = 9876,
+                next = new ListNode<int>()
+                {
+                    value = 5432,
+                    next = new ListNode<int>()
+                    {
+                        value = 1999
+                    }
+                }
+            };
+            var b = new ListNode<int>()
+            {
+                value = 1,
+                next = new ListNode<int>()
+                {
+                    value = 8001
+                }
+            };
+            var result = p.addTwoHugeNumbers(a, b);
+            PrintResult(result);
+        }
+
+        private static void PrintResult(ListNode<int> result)
+        {
+            while (result != null)
+            {
+                Console.WriteLine(result.value);
+                result = result.next;
+            }
         }
     }
 }
