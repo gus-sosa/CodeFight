@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsListPalindrome", "IsListP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoHugeNumbers", "AddTwoHugeNumbers\AddTwoHugeNumbers.csproj", "{4F1B020B-AE07-4434-B2D0-0E70383C020D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoLinkedLists", "MergeTwoLinkedLists\MergeTwoLinkedLists.csproj", "{F8FDAA66-0C23-48BD-8B40-4604696051FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{4F1B020B-AE07-4434-B2D0-0E70383C020D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F1B020B-AE07-4434-B2D0-0E70383C020D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F1B020B-AE07-4434-B2D0-0E70383C020D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FDAA66-0C23-48BD-8B40-4604696051FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FDAA66-0C23-48BD-8B40-4604696051FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FDAA66-0C23-48BD-8B40-4604696051FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FDAA66-0C23-48BD-8B40-4604696051FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{68CE4926-8F8A-40B1-9E79-105C33BEB5B7} = {B687C682-7913-4C54-B0F6-7DF61C4E4522}
 		{54EDE795-C54B-4615-9A11-7165A02F6F34} = {B687C682-7913-4C54-B0F6-7DF61C4E4522}
 		{4F1B020B-AE07-4434-B2D0-0E70383C020D} = {B687C682-7913-4C54-B0F6-7DF61C4E4522}
+		{F8FDAA66-0C23-48BD-8B40-4604696051FD} = {B687C682-7913-4C54-B0F6-7DF61C4E4522}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
