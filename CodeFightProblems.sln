@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingDishes", "GroupingD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreFollowingPatterns", "AreFollowingPatterns\AreFollowingPatterns.csproj", "{C59E7661-719C-4CEE-8185-F76574A622C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "containsCloseNums", "containsCloseNums\containsCloseNums.csproj", "{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{C59E7661-719C-4CEE-8185-F76574A622C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C59E7661-719C-4CEE-8185-F76574A622C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C59E7661-719C-4CEE-8185-F76574A622C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{5E42E47A-307D-4ADA-8720-15E870622906} = {E87B9B83-55CE-451B-B3A4-5D0FDA59FE97}
 		{C8F49996-C93C-48C6-BA2B-0B2ACBC08C0B} = {5E42E47A-307D-4ADA-8720-15E870622906}
 		{C59E7661-719C-4CEE-8185-F76574A622C5} = {5E42E47A-307D-4ADA-8720-15E870622906}
+		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF} = {5E42E47A-307D-4ADA-8720-15E870622906}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
