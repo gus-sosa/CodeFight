@@ -22,34 +22,29 @@ namespace PossibleSums
     {
         int possibleSums(int[] coins, int[] quantity)
         {
-            var q = new Queue<List<int>>();
-            q.Enqueue(Enumerable.Repeat(0, coins.Length).ToList());
-            var hash = new HashSet<int>();
-
-            while (q.Count > 0)
+            var hash = new HashSet<int>() { 0 };
+            for (int i = 0; i < coins.Length; i++)
             {
-                List<int> current = q.Dequeue();
-                int sum = current.Select((count, index) => coins[index] * count).Sum();
-                for (int i = 0; i < coins.Length; i++)
-                    if (quantity[i] - current[i] - 1 >= 0 && !hash.Contains(sum + coins[i]))
+                int currentCoin = coins[i];
+                var newHash = new HashSet<int>();
+                foreach (int calculatedSum in hash)
+                {
+                    for (int q = 1; q <= quantity[i]; q++)
                     {
-                        hash.Add(sum + coins[i]);
-                        var newList = new int[current.Count];
-                        current.CopyTo(newList, 0);
-                        newList[i]++;
-                        var list = newList.ToList();
-                        Console.WriteLine(MyClass.ToString(list));
-                        q.Enqueue(list);
+                        int newValue = currentCoin * q + calculatedSum;
+                        if (!hash.Contains(newValue) && !newHash.Contains(newValue))
+                            newHash.Add(newValue);
                     }
+                }
+                hash.UnionWith(newHash);
             }
-
-            return hash.Count;
+            return hash.Count - 1;
         }
 
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.possibleSums(new[] { 6, 12, 7, 16, 8, 5, 17, 18, 6 }, new[] { 3, 4, 4, 2, 6, 4, 4, 2, 5 }));
+            Console.WriteLine(p.possibleSums(new[] { 10, 50, 100 }, new[] { 1, 2, 1 }));
         }
     }
 }
