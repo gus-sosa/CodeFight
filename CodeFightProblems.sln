@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "containsCloseNums", "contai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PossibleSums", "PossibleSums\PossibleSums.csproj", "{D34BC224-118F-43FB-871A-4EF3C9D200BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapLexOrder", "SwapLexOrder\SwapLexOrder.csproj", "{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{D34BC224-118F-43FB-871A-4EF3C9D200BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34BC224-118F-43FB-871A-4EF3C9D200BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34BC224-118F-43FB-871A-4EF3C9D200BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{C59E7661-719C-4CEE-8185-F76574A622C5} = {5E42E47A-307D-4ADA-8720-15E870622906}
 		{90FF93F8-DB2B-435E-A2FF-34C9FDBE8EFF} = {5E42E47A-307D-4ADA-8720-15E870622906}
 		{D34BC224-118F-43FB-871A-4EF3C9D200BC} = {5E42E47A-307D-4ADA-8720-15E870622906}
+		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF} = {5E42E47A-307D-4ADA-8720-15E870622906}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
