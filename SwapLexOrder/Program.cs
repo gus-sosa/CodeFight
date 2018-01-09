@@ -23,14 +23,7 @@ namespace SwapLexOrder
 
             var dict = new Dictionary<int, SortedSet<int>>();
             foreach (int[] pair in pairs)
-            {
                 Merge(pair[0], pair[1], set, dict);
-                int setIndex = GetSet(pair[0], set);
-                if (!dict.ContainsKey(setIndex))
-                    dict[setIndex] = new SortedSet<int>();
-                dict[setIndex].Add(pair[0]);
-                dict[setIndex].Add(pair[1]);
-            }
 
             var bestStr = new StringBuilder(str);
             foreach (SortedSet<int> dictValue in dict.Values)
@@ -53,25 +46,29 @@ namespace SwapLexOrder
 
         private void Merge(int pos1, int pos2, int[] set, Dictionary<int, SortedSet<int>> dict)
         {
-            if ((set[pos1] == -1 && set[pos2] == -1) || (set[pos1] != -1 && set[pos2] != -1))
+            int parent1 = GetSet(pos1, set);
+            int parent2 = GetSet(pos2, set);
+            if (parent1 == parent2)
+                return;
+
+            if (parent1 == pos1)
             {
-                if (set[pos1] != -1)
-                {
-                    int parentSet1 = GetSet(pos1, set);
-                    int parentSet2 = GetSet(pos2, set);
-                    if (parentSet1 != parentSet2)
-                    {
-                        dict[parentSet1].UnionWith(dict[parentSet2]);
-                        dict.Remove(parentSet2);
-                    }
-                }
-                set[pos2] = set[pos1] == -1 ? pos1 : set[pos1];
+                set[pos1] = parent2;
+                AddToDict(dict, set, pos2, pos1);
             }
-            else
+            else if (parent2 == pos2)
             {
-                if (set[pos1] == -1) set[pos1] = set[pos2];
-                else set[pos2] = set[pos1];
+                set[pos2] = parent1;
+                AddToDict(dict, set, pos1, pos2);
             }
+        }
+
+        private void AddToDict(Dictionary<int, SortedSet<int>> dict, int[] set, int pos1, int pos2)
+        {
+            int parent = GetSet(pos1, set);
+            if (!dict.ContainsKey(parent))
+                dict[parent] = new SortedSet<int>() { pos1 };
+            dict[parent].Add(pos2);
         }
 
         private int GetSet(int pos, int[] set)
@@ -85,18 +82,10 @@ namespace SwapLexOrder
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.swapLexOrder("fixmfbhyutghwbyezkveyameoamqoi", new[]
+            Console.WriteLine(p.swapLexOrder("abdc", new[]
             {
-                new[]{8,5},
-                new[]{10,8},
-                new[]{4,18},
-                new[]{20,12},
-                new[]{5,2},
-                new[]{17,2},
-                new[]{13,25},
-                new[]{29,12},
-                new[]{22,2},
-                new[]{17,11}
+                new[]{1, 4},
+                new[]{ 3, 4}
             }));
         }
     }
