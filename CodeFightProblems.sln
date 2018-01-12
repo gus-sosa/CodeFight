@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trees", "Trees", "{F74C81EA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hasPathWithGivenSum", "hasPathWithGivenSum\hasPathWithGivenSum.csproj", "{EF1B86A1-E6F8-48F8-959E-99E5D0E85670}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isTreeSymetric", "isTreeSymetric\isTreeSymetric.csproj", "{D33DB71F-542A-4865-9B48-99B69C4AAF33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,10 @@ Global
 		{EF1B86A1-E6F8-48F8-959E-99E5D0E85670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF1B86A1-E6F8-48F8-959E-99E5D0E85670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF1B86A1-E6F8-48F8-959E-99E5D0E85670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33DB71F-542A-4865-9B48-99B69C4AAF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33DB71F-542A-4865-9B48-99B69C4AAF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33DB71F-542A-4865-9B48-99B69C4AAF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33DB71F-542A-4865-9B48-99B69C4AAF33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +153,7 @@ Global
 		{BCDC15C6-44A2-4177-9FCA-B6CF2C4E65DF} = {5E42E47A-307D-4ADA-8720-15E870622906}
 		{F74C81EA-3920-4501-AE0D-2AB91A63E1FC} = {E87B9B83-55CE-451B-B3A4-5D0FDA59FE97}
 		{EF1B86A1-E6F8-48F8-959E-99E5D0E85670} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
+		{D33DB71F-542A-4865-9B48-99B69C4AAF33} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
