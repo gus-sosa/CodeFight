@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -21,9 +22,19 @@ namespace SwapLexOrder
             for (int i = 0; i < set.Length; i++)
                 set[i] = -1;
 
-            var dict = new Dictionary<int, SortedSet<int>>();
             foreach (int[] pair in pairs)
-                Merge(pair[0], pair[1], set, dict);
+                Merge(pair[0], pair[1], set);
+
+            var dict = new Dictionary<int, SortedSet<int>>();
+            for (int i = 0; i < set.Length; i++)
+            {
+                int parent = GetSet(i, set);
+                if (parent == i)
+                    continue;
+                if (!dict.ContainsKey(parent))
+                    dict[parent] = new SortedSet<int>() { parent };
+                dict[parent].Add(i);
+            }
 
             var bestStr = new StringBuilder(str);
             foreach (SortedSet<int> dictValue in dict.Values)
@@ -44,37 +55,12 @@ namespace SwapLexOrder
             return bestStr.ToString();
         }
 
-        private void Merge(int pos1, int pos2, int[] set, Dictionary<int, SortedSet<int>> dict)
+        private void Merge(int v1, int v2, int[] set)
         {
-            int parent1 = GetSet(pos1, set);
-            int parent2 = GetSet(pos2, set);
-            if (parent1 == parent2)
-                return;
-
-            if (parent1 == pos1)
-            {
-                AddToDict(dict, set, pos2, pos1);
-                set[pos1] = parent2;
-            }
-            else
-            {
-                AddToDict(dict, set, pos1, pos2);
-                set[pos2] = parent1;
-            }
-        }
-
-        private void AddToDict(Dictionary<int, SortedSet<int>> dict, int[] set, int pos1, int pos2)
-        {
-            int parent1 = GetSet(pos1, set);
-            int parent2 = GetSet(pos2, set);
-            if (!dict.ContainsKey(parent1))
-                dict[parent1] = new SortedSet<int>() { pos1 };
-            dict[parent1].Add(pos2);
-            if (dict.ContainsKey(parent2))
-            {
-                dict[parent1].UnionWith(dict[parent2]);
-                dict.Remove(parent2);
-            }
+            int parent1 = GetSet(v1, set);
+            int parent2 = GetSet(v2, set);
+            if (parent1 != parent2)
+                set[parent2] = parent1;
         }
 
         private int GetSet(int pos, int[] set)
@@ -88,58 +74,37 @@ namespace SwapLexOrder
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.swapLexOrder("wdbmjpxusweoaxfybkikectlgvrxyracjxeghyctvvexpoxibunjvswhuwduirybhrfvcybuaisbujcngdiaotysffkxocnajloq", new[]
+            Console.WriteLine(p.swapLexOrder("qvspxdrbvwfuaahtzbpjudfyzccgzwynkgihwmdshvfnvyvfjc", new[]
             {
-                new[]{60,65},
-                new[]{41,93},
-                new[]{41,58},
-                new[]{87,92},
-                new[]{34,87},
-                new[]{37,56},
-                new[]{35,79},
-                new[]{10,54},
-                new[]{35,73},
-                new[]{56,57},
-                new[]{5,65},
-                new[]{69,91},
-                new[]{6,65},
-                new[]{72,95},
-                new[]{8,49},
-                new[]{35,62},
-                new[]{26,73},
-                new[]{38,58},
-                new[]{14,88},
-                new[]{38,41},
-                new[]{25,66},
-                new[]{29,47},
-                new[]{4,65},
-                new[]{44,59},
-                new[]{40,89},
-                new[]{7,86},
-                new[]{26,53},
-                new[]{39,81},
-                new[]{6,8},
-                new[]{3,68},
-                new[]{88,91},
-                new[]{42,71},
-                new[]{8,67},
-                new[]{34,89},
-                new[]{5,53},
-                new[]{76,79},
-                new[]{16,75},
-                new[]{44,70},
-                new[]{37,44},
-                new[]{62,94},
-                new[]{66,83},
-                new[]{42,70},
-                new[]{3,76},
-                new[]{22,37},
-                new[]{27,36},
-                new[]{81,96},
-                new[]{11,25},
-                new[]{29,58},
-                new[]{33,81},
-                new[]{36,44}
+                new[]{16,26},
+                new[]{2,25},
+                new[]{25,27},
+                new[]{19,20},
+                new[]{13,20},
+                new[]{4,26},
+                new[]{19,27},
+                new[]{18,26},
+                new[]{13,23},
+                new[]{1,4},
+                new[]{11,19},
+                new[]{16,19},
+                new[]{25,28},
+                new[]{19,30},
+                new[]{19,25},
+                new[]{1,11},
+                new[]{2,20},
+                new[]{10,22},
+                new[]{6,19},
+                new[]{7,26},
+                new[]{3,30},
+                new[]{15,23},
+                new[]{12,26},
+                new[]{1,3},
+                new[]{3,12},
+                new[]{3,26},
+                new[]{16,30},
+                new[]{2,16},
+                new[]{4,13}
             }));
         }
     }
