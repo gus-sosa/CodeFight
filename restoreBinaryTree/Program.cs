@@ -71,8 +71,11 @@ namespace restoreBinaryTree
             inorderLeft = leftChildren.ToArray();
             inorderRight = rightChildren.ToArray();
         }
+
         static void Main(string[] args)
         {
+            var p = new Program();
+            var r = p.restoreBinaryTree(new[] { 4, 2, 1, 5, 3, 6 }, new[] { 1, 2, 4, 3, 5, 6 });
         }
     }
 }
