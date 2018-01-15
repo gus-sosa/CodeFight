@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findProfessor", "findProfes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kthSmallestInBST", "kthSmallestInBST\kthSmallestInBST.csproj", "{E184600B-D113-4E5F-AEBB-3A0B933D547B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isSubtree", "isSubtree\isSubtree.csproj", "{4315EC48-80F8-418C-A62F-25021AD7403E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,10 @@ Global
 		{E184600B-D113-4E5F-AEBB-3A0B933D547B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E184600B-D113-4E5F-AEBB-3A0B933D547B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E184600B-D113-4E5F-AEBB-3A0B933D547B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4315EC48-80F8-418C-A62F-25021AD7403E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4315EC48-80F8-418C-A62F-25021AD7403E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4315EC48-80F8-418C-A62F-25021AD7403E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4315EC48-80F8-418C-A62F-25021AD7403E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +174,7 @@ Global
 		{D33DB71F-542A-4865-9B48-99B69C4AAF33} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 		{75BE9A8B-1967-4347-BD27-7FEBBF5B939E} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 		{E184600B-D113-4E5F-AEBB-3A0B933D547B} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
+		{4315EC48-80F8-418C-A62F-25021AD7403E} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
