@@ -111,7 +111,9 @@ namespace findSubstrings
 
         static void Main(string[] args)
         {
-
+            var p=new Program();
+            string[] words = new[] { "" };
+            string[] result = p.findSubstrings();
         }
     }
 }
