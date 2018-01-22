@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isSubtree", "isSubtree\isSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restoreBinaryTree", "restoreBinaryTree\restoreBinaryTree.csproj", "{F9D36B75-B88D-490F-864F-F2A7F9C5CB12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findSubstrings", "findSubstrings\findSubstrings.csproj", "{518CD577-24C2-4EB2-BB4F-79E75CB4E047}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,6 +153,10 @@ Global
 		{F9D36B75-B88D-490F-864F-F2A7F9C5CB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9D36B75-B88D-490F-864F-F2A7F9C5CB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9D36B75-B88D-490F-864F-F2A7F9C5CB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518CD577-24C2-4EB2-BB4F-79E75CB4E047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518CD577-24C2-4EB2-BB4F-79E75CB4E047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518CD577-24C2-4EB2-BB4F-79E75CB4E047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518CD577-24C2-4EB2-BB4F-79E75CB4E047}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +188,7 @@ Global
 		{E184600B-D113-4E5F-AEBB-3A0B933D547B} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 		{4315EC48-80F8-418C-A62F-25021AD7403E} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 		{F9D36B75-B88D-490F-864F-F2A7F9C5CB12} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
+		{518CD577-24C2-4EB2-BB4F-79E75CB4E047} = {F74C81EA-3920-4501-AE0D-2AB91A63E1FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
