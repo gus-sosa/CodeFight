@@ -16,8 +16,7 @@ namespace findSubstrings
             {
                 int iStart, iEnd;
                 LongestPart(word, trie, out iStart, out iEnd);
-                if (iStart != -1)
-                    list.Add(word.Insert(iEnd, "]").Insert(iStart, "["));
+                list.Add(iStart != -1 ? word.Insert(iEnd + 1, "]").Insert(iStart, "[") : word);
             }
             return list.ToArray();
         }
@@ -46,7 +45,7 @@ namespace findSubstrings
                 internal bool EndOfWord { get; set; }
                 internal Dictionary<char, TrieNode> Children { get; set; }
 
-                private TrieNode()
+                internal TrieNode()
                 {
                     Character = '\0';
                     Children = new Dictionary<char, TrieNode>();
@@ -68,6 +67,7 @@ namespace findSubstrings
 
             public Trie(params string[] parts)
             {
+                Root = new TrieNode();
                 foreach (string part in parts)
                     AddWord(part);
             }
@@ -112,9 +112,18 @@ namespace findSubstrings
         static void Main(string[] args)
         {
             var p = new Program();
-            string[] words = new[] { "" };
-            string[] parts = new[] { "" };
+            string[] words = new[] { "Apple",
+                "Melon",
+                "Orange",
+                "Watermelon" };
+            string[] parts = new[] { "a",
+                "mel",
+                "lon",
+                "el",
+                "An" };
             string[] result = p.findSubstrings(words, parts);
+            foreach (string s in result)
+                Console.WriteLine(s);
         }
     }
 }
