@@ -50,11 +50,11 @@ namespace longestPath
         private List<string> GetTokens(string fileSystem)
         {
             var indexOfRootFolder = fileSystem.IndexOf('\\');
-            var tokens = new List<string> { fileSystem.Substring(0, indexOfRootFolder + 1) };
-            var regex = new Regex("(\\\\n(\\\\t)+)([^\\\\])+");
+            var tokens = new List<string> { fileSystem.Substring(0, indexOfRootFolder) };
+            var regex = new Regex("(\\\\f(\\\\t)+)([^\\\\]+)");
             var otherTokens = regex.Matches(fileSystem);
             foreach (Match token in otherTokens)
-                tokens.Add(token.Groups[2].Value);
+                tokens.Add(token.Groups[0].Value);
             return tokens;
         }
 
@@ -82,6 +82,8 @@ namespace longestPath
 
         static void Main(string[] args)
         {
+            var p = new Program();
+            Console.WriteLine(p.longestPath("user\\f\\tpictures\\f\\t\\tphoto.png\\f\\t\\tcamera\\f\\tdocuments\\f\\t\\tlectures\\f\\t\\t\\tnotes.txt"));
         }
     }
 }
