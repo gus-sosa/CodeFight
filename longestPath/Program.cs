@@ -28,10 +28,17 @@ namespace longestPath
         private static Dictionary<int, Tree<string>> dict = new Dictionary<int, Tree<string>>();
         int longestPath(string fileSystem)
         {
+            fileSystem = fileSystem.Replace("\f", "\\f").Replace("\t", "\\t");
+            Tree<string> tree = BuildTree(fileSystem);
+            return longestPath1(tree, tree.Value);
+        }
+
+        private Tree<string> BuildTree(string fileSystem)
+        {
             var tokens = GetTokens(fileSystem);
-            var tree = new Tree<string>() { Value = tokens[0] };
-            dict[0] = tree;
-            for (int i = 1; i < tokens.Count; i++)
+            var tree = new Tree<string>() { Value = string.Empty };
+            dict[-1] = tree;
+            for (int i = 0; i < tokens.Count; i++)
             {
                 string currentToken = tokens[i], cad;
                 int level = GetLevel(currentToken, out cad);
@@ -40,7 +47,7 @@ namespace longestPath
                 rightMost.AddChild(newNode);
                 UpdateDict(newNode, level);
             }
-            return longestPath1(tree, tree.Value);
+            return tree;
         }
 
         private Tree<string> GetRightMostInLevel(int level) { return dict[level]; }
@@ -50,8 +57,8 @@ namespace longestPath
         private List<string> GetTokens(string fileSystem)
         {
             var indexOfRootFolder = fileSystem.IndexOf('\\');
-            var tokens = new List<string> { fileSystem.Substring(0, indexOfRootFolder) };
-            var regex = new Regex("(\\\\f(\\\\t)+)([^\\\\]+)");
+            var tokens = new List<string> { indexOfRootFolder != -1 ? fileSystem.Substring(0, indexOfRootFolder) : fileSystem };
+            var regex = new Regex("(\\\\f(\\\\t)*)([^\\\\]+)");
             var otherTokens = regex.Matches(fileSystem);
             foreach (Match token in otherTokens)
                 tokens.Add(token.Groups[0].Value);
@@ -60,6 +67,12 @@ namespace longestPath
 
         private int GetLevel(string currentToken, out string cad)
         {
+            if (!currentToken.StartsWith("\\f"))
+            {
+                cad = currentToken;
+                return 0;
+            }
+
             currentToken = currentToken.Remove(0, 2);
             int level = 0;
             while (currentToken[0] == '\\')
@@ -74,16 +87,16 @@ namespace longestPath
         private int longestPath1(Tree<string> tree, string path)
         {
             if (tree == null) return 0;
-            int length = path.Length;
+            int length = tree.Value.Contains(".") ? path.Length : 0;
             foreach (Tree<string> treeChild in tree.Children)
-                length = Math.Max(length, longestPath1(treeChild, string.Format("{0}/{1}", path, treeChild.Value)));
+                length = Math.Max(length, longestPath1(treeChild, path == string.Empty ? treeChild.Value : string.Format("{0}/{1}", path, treeChild.Value)));
             return length;
         }
 
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.longestPath("user\\f\\tpictures\\f\\t\\tphoto.png\\f\\t\\tcamera\\f\\tdocuments\\f\\t\\tlectures\\f\\t\\t\\tnotes.txt"));
+            Console.WriteLine(p.longestPath("user\f\tpictures\f\tdocuments\f\t\tnotes.txt"));
         }
     }
 }
