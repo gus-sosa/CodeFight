@@ -12,26 +12,27 @@ namespace graphDistances
         int[] graphDistances(int[][] g, int s)
         {
             int[] distances = new int[g.GetLength(0)];
-            bool[] marks = new bool[distances.Length];
             for (int i = 0; i < distances.Length; i++)
                 distances[i] = int.MaxValue;
             distances[s] = 0;
-            var queue = new Queue<int>();
-            queue.Enqueue(s);
-            while (queue.Count > 0)
+
+            var unvistedNodes = new List<int>() { s };
+            if (s > 0)
+                unvistedNodes = unvistedNodes.Concat(Enumerable.Range(0, s)).ToList();
+            if (distances.Length - 1 - s > 0)
+                unvistedNodes = unvistedNodes.Concat(Enumerable.Range(s + 1, distances.Length - 1 - s)).ToList();
+            var sorter = new NodeSorter(distances);
+            while (unvistedNodes.Count > 0)
             {
-                int currentNode = queue.Dequeue();
-                if (marks[currentNode])
-                    continue;
-                marks[currentNode] = true;
+                int currentNode = unvistedNodes[0];
+                unvistedNodes.RemoveAt(0);
                 foreach (var connectedNode in ConnectedNodes(currentNode, g))
                 {
                     int dst = distances[currentNode] + g[currentNode][connectedNode];
                     if (dst < distances[connectedNode])
                         distances[connectedNode] = dst;
-                    if (!marks[connectedNode])
-                        queue.Enqueue(connectedNode);
                 }
+                unvistedNodes.Sort(sorter);
             }
 
             return distances;
@@ -45,6 +46,20 @@ namespace graphDistances
                     yield return i;
         }
 
+        internal class NodeSorter : IComparer<int>
+        {
+            private readonly int[] _distances;
+
+            public NodeSorter(int[] distances)
+            {
+                _distances = distances;
+            }
+
+            public int Compare(int x, int y)
+            {
+                return _distances[x].CompareTo(_distances[y]);
+            }
+        }
 
         static void Main(string[] args)
         {
