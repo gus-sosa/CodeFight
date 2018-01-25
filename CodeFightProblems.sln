@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "digitTreeSum", "digitTreeSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "longestPath", "longestPath\longestPath.csproj", "{94474F65-35D0-46B0-A486-C33EFA790888}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphDistances", "graphDistances\graphDistances.csproj", "{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{94474F65-35D0-46B0-A486-C33EFA790888}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94474F65-35D0-46B0-A486-C33EFA790888}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94474F65-35D0-46B0-A486-C33EFA790888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -227,6 +233,7 @@ Global
 		{A8F9199A-CC93-4C14-B8B9-C89E441D34FF} = {5F2A973A-B7A1-47FB-8036-14118E18DADE}
 		{F54A90A2-D73D-4A90-A3BC-7DDA7D365F1C} = {5F2A973A-B7A1-47FB-8036-14118E18DADE}
 		{94474F65-35D0-46B0-A486-C33EFA790888} = {5F2A973A-B7A1-47FB-8036-14118E18DADE}
+		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8} = {5F2A973A-B7A1-47FB-8036-14118E18DADE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
