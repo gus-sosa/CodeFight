@@ -77,6 +77,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backtracking", "Backtrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "climbingStaircase", "climbingStaircase\climbingStaircase.csproj", "{F6200CD7-E41E-41AF-8D34-FC5CF66BBE59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nQueens", "nQueens\nQueens.csproj", "{ACC6AFE5-D3EB-4027-B828-02C89568D97E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{F6200CD7-E41E-41AF-8D34-FC5CF66BBE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6200CD7-E41E-41AF-8D34-FC5CF66BBE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6200CD7-E41E-41AF-8D34-FC5CF66BBE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC6AFE5-D3EB-4027-B828-02C89568D97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC6AFE5-D3EB-4027-B828-02C89568D97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC6AFE5-D3EB-4027-B828-02C89568D97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC6AFE5-D3EB-4027-B828-02C89568D97E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -244,6 +250,7 @@ Global
 		{946888CF-0D0D-4C4C-976A-8FE3AD6AD1C8} = {5F2A973A-B7A1-47FB-8036-14118E18DADE}
 		{5BAE6680-B3A6-4188-8B8B-64ED2939E79D} = {E87B9B83-55CE-451B-B3A4-5D0FDA59FE97}
 		{F6200CD7-E41E-41AF-8D34-FC5CF66BBE59} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
+		{ACC6AFE5-D3EB-4027-B828-02C89568D97E} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
