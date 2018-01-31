@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumSubsets", "sumSubsets\su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wordBoggle", "wordBoggle\wordBoggle.csproj", "{0FF0D43B-D07E-46A1-ABA8-B78EBC97B218}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "combinationSum", "combinationSum\combinationSum.csproj", "{3A034488-3874-4D72-A286-E06F8F55B106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +223,10 @@ Global
 		{0FF0D43B-D07E-46A1-ABA8-B78EBC97B218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FF0D43B-D07E-46A1-ABA8-B78EBC97B218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FF0D43B-D07E-46A1-ABA8-B78EBC97B218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A034488-3874-4D72-A286-E06F8F55B106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A034488-3874-4D72-A286-E06F8F55B106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A034488-3874-4D72-A286-E06F8F55B106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A034488-3874-4D72-A286-E06F8F55B106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,6 +271,7 @@ Global
 		{ACC6AFE5-D3EB-4027-B828-02C89568D97E} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
 		{92FD134E-213A-4E8A-9E5F-C5CA004E39DF} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
 		{0FF0D43B-D07E-46A1-ABA8-B78EBC97B218} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
+		{3A034488-3874-4D72-A286-E06F8F55B106} = {5BAE6680-B3A6-4188-8B8B-64ED2939E79D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
