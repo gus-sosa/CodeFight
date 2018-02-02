@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "climbingStairs", "climbingS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "houseRobber", "houseRobber\houseRobber.csproj", "{9E13824B-94B4-4CF2-9212-0876754D955D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "composeRanges", "composeRanges\composeRanges.csproj", "{174E7485-164E-4064-8EEC-E906189B60FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -241,6 +243,10 @@ Global
 		{9E13824B-94B4-4CF2-9212-0876754D955D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E13824B-94B4-4CF2-9212-0876754D955D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E13824B-94B4-4CF2-9212-0876754D955D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174E7485-164E-4064-8EEC-E906189B60FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174E7485-164E-4064-8EEC-E906189B60FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174E7485-164E-4064-8EEC-E906189B60FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174E7485-164E-4064-8EEC-E906189B60FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -289,6 +295,7 @@ Global
 		{A1028F7D-3453-40A6-AE5D-B47E4836B889} = {E87B9B83-55CE-451B-B3A4-5D0FDA59FE97}
 		{9B2A67FC-C4DD-410D-A409-3A4867130143} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
 		{9E13824B-94B4-4CF2-9212-0876754D955D} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
+		{174E7485-164E-4064-8EEC-E906189B60FF} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
