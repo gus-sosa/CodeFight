@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,32 +9,39 @@ namespace mapDecoding
 {
     class Program
     {
-        Dictionary<int, int> dict = new Dictionary<int, int>();
-        private int modulo = (int)Math.Pow(10, 9);
-        int mapDecoding(string message) { return message.Contains('0') ? 0 : mapDecoding1(message, 0) % (int)(Math.Pow(10, 7) + 7); }
-
-        private int mapDecoding1(string message, int pos)
+        int mapDecoding(string message)
         {
-            if (pos == message.Length)
-                return 1;
+            var counter = new ulong[message.Length + 1];
+            counter[counter.Length - 1] = 1;
+            ulong modulo = (ulong)Math.Pow(10, 12);
 
-            if (dict.ContainsKey(pos))
-                return dict[pos];
+            for (int i = message.Length - 1; i >= 0; i--)
+                if (message[i] != '0')
+                {
+                    if (i + 1 < message.Length)
+                    {
+                        counter[i] += counter[i + 1];
+                        int num = Decode(message[i]) * 10 + Decode(message[i + 1]);
+                        if (num < 27)
+                        {
+                            if (i + 2 < message.Length) counter[i] += counter[i + 2];
+                            else counter[i] += 1;
+                        }
+                    }
+                    else counter[i] += 1;
 
-            int num = mapDecoding1(message, pos + 1);
-            if (pos < message.Length - 1)
-            {
-                int decode = 10 * Decode(message[pos]) + Decode(message[pos + 1]);
-                if (decode < 27)
-                    num += mapDecoding1(message, pos + 2);
-            }
-            return dict[pos] = num % modulo;
+                    counter[i] %= modulo;
+                }
+
+            return (int)(counter[0] % ((ulong)Math.Pow(10, 9) + 7));
         }
 
-        private int Decode(char c) { return c - 'A' + 1; }
+        private int Decode(char c) { return c - '0'; }
 
         static void Main(string[] args)
         {
+            var p = new Program();
+            Console.WriteLine(p.mapDecoding("1221112111122221211221221212212212111221222212122221222112122212121212221212122221211112212212211211"));
         }
     }
 }
