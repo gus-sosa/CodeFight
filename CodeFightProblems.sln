@@ -93,6 +93,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "houseRobber", "houseRobber\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "composeRanges", "composeRanges\composeRanges.csproj", "{174E7485-164E-4064-8EEC-E906189B60FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mapDecoding", "mapDecoding\mapDecoding.csproj", "{6672D595-91E1-4058-B7DB-BD9F1E3966D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -247,6 +249,10 @@ Global
 		{174E7485-164E-4064-8EEC-E906189B60FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{174E7485-164E-4064-8EEC-E906189B60FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{174E7485-164E-4064-8EEC-E906189B60FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6672D595-91E1-4058-B7DB-BD9F1E3966D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6672D595-91E1-4058-B7DB-BD9F1E3966D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6672D595-91E1-4058-B7DB-BD9F1E3966D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6672D595-91E1-4058-B7DB-BD9F1E3966D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -296,6 +302,7 @@ Global
 		{9B2A67FC-C4DD-410D-A409-3A4867130143} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
 		{9E13824B-94B4-4CF2-9212-0876754D955D} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
 		{174E7485-164E-4064-8EEC-E906189B60FF} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
+		{6672D595-91E1-4058-B7DB-BD9F1E3966D3} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
