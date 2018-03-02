@@ -18,35 +18,41 @@ namespace findLongestSubarrayBySum
     {
         int[] findLongestSubarrayBySum(int s, int[] arr)
         {
-            if (arr.Length == 1)
-                return arr[0] == s ? new int[] { 1, 1 } : new int[] { -1 };
-
-            var sum = new int[arr.Length];
-            sum[0] = arr[0];
+            int[] sum = new int[arr.Length];
             var dict = new Dictionary<int, SortedSet<int>>();
+            sum[0] = arr[0];
+            dict.Add(0, new SortedSet<int>() { 0 });
             for (int i = 1; i < arr.Length; i++)
             {
-                sum[i] = arr[i] + sum[i - 1];
-                if (sum[i] >= s)
+                sum[i] = sum[i - 1] + arr[i];
+                int key = sum[i] - arr[i];
+                if (!dict.ContainsKey(key))
+                    dict[key] = new SortedSet<int>();
+                dict[key].Add(i);
+            }
+
+            int iStart = -1, iEnd = 0;
+            for (int i = arr.Length - 1; i >= 0 && sum[i] >= s; i--)
+            {
+                int compl = sum[i] - s;
+                if (dict.ContainsKey(compl))
                 {
-                    int compl = sum[i] - s;
-                    if (!dict.ContainsKey(compl))
-                        dict[compl] = new SortedSet<int>();
-                    dict[compl].Add(i);
+                    int index = dict[compl].First();
+                    if (iStart == -1 || (i - index > iEnd - iStart))
+                    {
+                        iStart = index;
+                        iEnd = i;
+                    }
                 }
             }
 
-            for (int i = 0; i < arr.Length; i++)
-                if (dict.ContainsKey(sum[i] - arr[i]))
-                    return new int[] { i + 1, dict[sum[i] - arr[i]].Last() + 1 };
-
-            return new int[] { -1 };
+            return iStart == -1 ? new int[] { -1 } : new int[] { iStart + 1, iEnd + 1 };
         }
 
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.findLongestSubarrayBySum(3, new int[] { 3 }).StringValue());
+            Console.WriteLine(p.findLongestSubarrayBySum(12, new int[] { 1, 2, 3, 7, 5 }).StringValue());
         }
     }
 }
