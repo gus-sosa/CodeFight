@@ -18,31 +18,35 @@ namespace findLongestSubarrayBySum
     {
         int[] findLongestSubarrayBySum(int s, int[] arr)
         {
-            int[] sum = new int[arr.Length];
-            sum[0] = arr[0];
-            int iStart = -1, iEnd = 0;
+            if (arr.Length == 1)
+                return arr[0] == s ? new int[] { 1, 1 } : new int[] { -1 };
 
+            var sum = new int[arr.Length];
+            sum[0] = arr[0];
+            var dict = new Dictionary<int, SortedSet<int>>();
             for (int i = 1; i < arr.Length; i++)
+            {
                 sum[i] = arr[i] + sum[i - 1];
+                if (sum[i] >= s)
+                {
+                    int compl = sum[i] - s;
+                    if (!dict.ContainsKey(compl))
+                        dict[compl] = new SortedSet<int>();
+                    dict[compl].Add(i);
+                }
+            }
 
             for (int i = 0; i < arr.Length; i++)
-                for (int j = i; j < arr.Length; j++)
-                {
-                    int sumInterval = sum[j] - sum[i] + arr[i];
-                    if (sumInterval == s && (iStart == -1 || i < iStart || (i == iStart && j >= iEnd)))
-                    {
-                        iStart = i;
-                        iEnd = j;
-                    }
-                }
+                if (dict.ContainsKey(sum[i] - arr[i]))
+                    return new int[] { i + 1, dict[sum[i] - arr[i]].Last() + 1 };
 
-            return iStart == -1 ? new int[] { -1 } : new int[] { iStart + 1, iEnd + 1 };
+            return new int[] { -1 };
         }
 
         static void Main(string[] args)
         {
             var p = new Program();
-            Console.WriteLine(p.findLongestSubarrayBySum(15, new int[] { 1, 2, 3, 4, 5, 0, 0, 0, 6, 7, 8, 9, 10 }).StringValue());
+            Console.WriteLine(p.findLongestSubarrayBySum(3, new int[] { 3 }).StringValue());
         }
     }
 }
