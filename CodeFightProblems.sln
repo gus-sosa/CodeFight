@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsDuplicates", "Conta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumOfTwo", "sumOfTwo\sumOfTwo.csproj", "{7FDD2656-6F54-4AC3-9C45-EC121DE9802A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumInRange", "sumInRange\sumInRange.csproj", "{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -285,6 +287,10 @@ Global
 		{7FDD2656-6F54-4AC3-9C45-EC121DE9802A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDD2656-6F54-4AC3-9C45-EC121DE9802A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDD2656-6F54-4AC3-9C45-EC121DE9802A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -341,6 +347,7 @@ Global
 		{838BBD74-EECF-4C3B-AE72-ADD4D519079A} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{F86B2D7E-869F-49F7-BFBF-C288812F7C60} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{7FDD2656-6F54-4AC3-9C45-EC121DE9802A} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
+		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
