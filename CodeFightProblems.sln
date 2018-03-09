@@ -113,6 +113,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minSubstringWithAllChars", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fillingBlocks", "fillingBlocks\fillingBlocks.csproj", "{EF41582F-6111-4FB7-A282-679DFFAAE789}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphs", "Graphs", "{55EEA0EF-FE49-4105-89EE-953C707E582C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "newRoadSystem", "newRoadSystem\newRoadSystem.csproj", "{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +307,10 @@ Global
 		{EF41582F-6111-4FB7-A282-679DFFAAE789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF41582F-6111-4FB7-A282-679DFFAAE789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF41582F-6111-4FB7-A282-679DFFAAE789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -362,6 +370,7 @@ Global
 		{A6AC6A8B-A1D1-4FB9-8CF0-4DDD191BF7E4} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{DACD9C84-7070-4470-AD11-99D7BAC1C63F} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{EF41582F-6111-4FB7-A282-679DFFAAE789} = {A1028F7D-3453-40A6-AE5D-B47E4836B889}
+		{3EAA5358-CD45-42AE-B4F8-DB75F77AC7D3} = {55EEA0EF-FE49-4105-89EE-953C707E582C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
