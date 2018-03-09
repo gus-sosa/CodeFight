@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findLongestSubarrayBySum", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "productExceptSelf", "productExceptSelf\productExceptSelf.csproj", "{838BBD74-EECF-4C3B-AE72-ADD4D519079A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsDuplicates", "ContainsDuplicates\ContainsDuplicates.csproj", "{F86B2D7E-869F-49F7-BFBF-C288812F7C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -273,6 +275,10 @@ Global
 		{838BBD74-EECF-4C3B-AE72-ADD4D519079A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838BBD74-EECF-4C3B-AE72-ADD4D519079A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838BBD74-EECF-4C3B-AE72-ADD4D519079A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86B2D7E-869F-49F7-BFBF-C288812F7C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86B2D7E-869F-49F7-BFBF-C288812F7C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86B2D7E-869F-49F7-BFBF-C288812F7C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86B2D7E-869F-49F7-BFBF-C288812F7C60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -327,6 +333,7 @@ Global
 		{78A89349-2E69-48A0-A276-CAC53485B535} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{D93A37E4-3DB7-4160-9861-DAD835D61CCE} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 		{838BBD74-EECF-4C3B-AE72-ADD4D519079A} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
+		{F86B2D7E-869F-49F7-BFBF-C288812F7C60} = {A3066975-36F0-49A1-BBBE-267DE36190FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
