@@ -10,9 +10,19 @@ namespace productExceptSelf
     {
         int productExceptSelf(int[] nums, int m)
         {
-            int product = nums.Aggregate(1, (acc, v) => v * acc);
-            IEnumerable<int> productArray = nums.Select(i => (product / i) % m);
-            return productArray.Sum() % m;
+
+            int p = 1;
+            int s = 1;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                s = nums[i] * s % m;
+                p *= nums[i - 1];
+                p %= m;
+                s += p;
+            }
+
+            return s % m;
         }
 
         static void Main(string[] args)
