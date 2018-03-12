@@ -10,43 +10,50 @@ namespace financialCrisis
     {
         bool[][][] financialCrisis(bool[][] roadRegister)
         {
-            int[][] roads = GetRoads(roadRegister);
             bool[][][] results = new bool[roadRegister.Length][][];
 
             int newLength = roadRegister.Length - 1;
             for (int i = 0; i < roadRegister.Length; i++)
-                results[i] = BuildMap(roads.Where(road => road[0] != i && road[1] != i), newLength);
+            {
+                var newRoads = new bool[newLength][];
+                for (int j = 0; j < newLength; j++)
+                    newRoads[j] = new bool[newLength];
+
+                RemoveCity(newRoads, roadRegister, i);
+
+                results[i] = newRoads;
+            }
 
             return results;
         }
 
-        private bool[][] BuildMap(IEnumerable<int[]> roads, int n)
+        private void RemoveCity(bool[][] newRoads, bool[][] roadRegister, int city)
         {
-            var result = new bool[n][];
-            for (int i = 0; i < n; i++)
-                result[i] = new bool[n];
-
-            foreach (int[] road in roads)
-                result[road[0]][road[1]] = true;
-
-            return result;
+            int row = 0, col = 0;
+            for (int i = 0; i < newRoads.Length; i++)
+                for (int j = 0; j < newRoads.Length; j++)
+                    if (i == city || j == city)
+                    {
+                        col++;
+                        if (col == roadRegister.Length)
+                        {
+                            col = 0;
+                            row++;
+                        }
+                    }
+                    else newRoads[i][j] = roadRegister[row][col];
         }
-
-        private int[][] GetRoads(bool[][] roadRegister)
-        {
-            var roads = new List<int[]>();
-            int n = roadRegister.Length;
-            for (int i = 0; i < n; i++)
-                for (int j = 0; j < n; j++)
-                    if (roadRegister[i][j])
-                        roads.Add(new int[] { i, j });
-
-            return roads.ToArray();
-        }
-
 
         static void Main(string[] args)
         {
+            var p = new Program();
+            p.financialCrisis(new[]
+            {
+                new[] {false, true, true, false},
+                new[] {true, false, true, false},
+                new[] {true, true, false, true},
+                new[] {false, false, true, false}
+            });
         }
     }
 }
