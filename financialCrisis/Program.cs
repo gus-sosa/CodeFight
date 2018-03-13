@@ -30,18 +30,18 @@ namespace financialCrisis
         private void RemoveCity(bool[][] newRoads, bool[][] roadRegister, int city)
         {
             int row = 0, col = 0;
-            for (int i = 0; i < newRoads.Length; i++)
-                for (int j = 0; j < newRoads.Length; j++)
-                    if (i == city || j == city)
-                    {
-                        col++;
-                        if (col == roadRegister.Length)
+            for (int i = 0; i < roadRegister.Length; i++)
+                if (i != city)
+                    for (int j = 0; j < roadRegister.Length; j++)
+                        if (j != city)
                         {
-                            col = 0;
-                            row++;
+                            newRoads[row][col++] = roadRegister[i][j];
+                            if (col == roadRegister.Length - 1)
+                            {
+                                col = 0;
+                                row++;
+                            }
                         }
-                    }
-                    else newRoads[i][j] = roadRegister[row][col];
         }
 
         static void Main(string[] args)
