@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efficientRoadNetwork", "eff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "financialCrisis", "financialCrisis\financialCrisis.csproj", "{06333B4A-45FD-42B0-89D1-89A3B8FA6DE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamingRoads", "NamingRoads\NamingRoads.csproj", "{C54363DC-C2A4-4B10-A3F4-59D7EC653999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -329,6 +331,10 @@ Global
 		{06333B4A-45FD-42B0-89D1-89A3B8FA6DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06333B4A-45FD-42B0-89D1-89A3B8FA6DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06333B4A-45FD-42B0-89D1-89A3B8FA6DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54363DC-C2A4-4B10-A3F4-59D7EC653999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54363DC-C2A4-4B10-A3F4-59D7EC653999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54363DC-C2A4-4B10-A3F4-59D7EC653999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54363DC-C2A4-4B10-A3F4-59D7EC653999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -392,6 +398,7 @@ Global
 		{4FF1D1BD-16FD-4495-88AB-294A19754077} = {55EEA0EF-FE49-4105-89EE-953C707E582C}
 		{954E9DF0-A040-46BC-AFB8-79836CAEE570} = {55EEA0EF-FE49-4105-89EE-953C707E582C}
 		{06333B4A-45FD-42B0-89D1-89A3B8FA6DE6} = {55EEA0EF-FE49-4105-89EE-953C707E582C}
+		{C54363DC-C2A4-4B10-A3F4-59D7EC653999} = {55EEA0EF-FE49-4105-89EE-953C707E582C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9453D720-EEBD-44E2-9A82-0CA928CF74E1}
