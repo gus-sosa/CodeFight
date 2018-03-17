@@ -32,6 +32,9 @@ namespace citiesConquering
             var conquering = Enumerable.Repeat(-1, n).ToArray();
             bool flag = true;
             int day = 0;
+            var newOutgoing = new int[outgoing.Length];
+            Array.Copy(outgoing, newOutgoing, outgoing.Length);
+            var emptyList = new HashSet<int>();
             do
             {
                 flag = true;
@@ -39,21 +42,25 @@ namespace citiesConquering
 
                 for (int i = 0; i < n; i++)
                 {
+                    if (conquering[i] != -1)
+                        continue;
                     int degree = outgoing[i];
                     if (degree <= 1)
                     {
                         conquering[i] = day;
-                        outgoing[i]--;
-                        var conn = connections[i];
+                        newOutgoing[i]--;
+                        var conn = connections.ContainsKey(i) ? connections[i] : emptyList;
                         foreach (int node in conn)
                         {
                             connections[node].Remove(i);
-                            outgoing[node]--;
+                            newOutgoing[node]--;
                         }
-                        connections.Remove(i);
+                        if (connections.ContainsKey(i))
+                            connections.Remove(i);
                         flag = false;
                     }
                 }
+                Array.Copy(newOutgoing, outgoing, outgoing.Length);
             } while (!flag);
 
             return conquering;
